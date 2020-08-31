@@ -1,0 +1,108 @@
+<!doctype html>
+<!--[if lt IE 7 ]> <html class="ie ie6 ie-lt10 ie-lt9 ie-lt8 ie-lt7 no-js" lang="en"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie ie7 ie-lt10 ie-lt9 ie-lt8 no-js" lang="en"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie ie8 ie-lt10 ie-lt9 no-js" lang="en"> <![endif]-->
+<!--[if IE 9 ]>    <html class="ie ie9 ie-lt10 no-js" lang="en"> <![endif]-->
+<!--[if gt IE 9]><!--><html class="no-js" lang="en"><!--<![endif]-->
+
+<head>
+	<meta charset="utf-8">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<title>Pesquisa de CEPs</title>
+	<meta name="author" content="Camila Kadi Garcia" />
+	<meta name="description" content="Uma pesquisa de CEP simples" />
+
+	<meta name="google-site-verification" content="" />
+
+	<meta name="Copyright" content="Camila Kadi Garcia" />
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- <link rel="shortcut icon" href="favicon.ico" /> -->
+
+	<link rel="stylesheet" href="assets/css/reset.css" />
+	<link rel="stylesheet" href="assets/css/fonts.css" />
+	<link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body>
+<header>
+	<h1><a>Buscar CEP</a></h1>
+
+	<nav class="menu">
+		<ol>
+			<li>
+				<a>CSS<span class="line"></span></a>
+			</li>
+			<li>
+				<a>Componentes<span class="line"></span></a>
+			</li>
+			<li>
+				<a>JavaScript<span class="line"></span></a>
+			</li>
+			<li>
+				<a>HTML<span class="line"></span></a>
+			</li>
+		</ol>
+	</nav>
+
+	<a class="button-menu" onClick="inserirClasseHamburger();">
+		<div class="nav-icon">
+			<span></span>
+			<span></span>
+			<span></span>
+		</div>
+	</a>
+
+	<nav class="hamburger-menu" id="hamburger">
+		<ol>
+			<li><a>CSS</a></li>
+			<li><a>Componentes</a></li>
+			<li><a>JavaScript</a></li>
+			<li><a>HTML</a></li>
+		</ol>
+	</nav>
+</header>
+
+<main>
+	<div class="content-form">
+		<h3 class="content-title">Digite um CEP</h3>
+		<span>Digite abaixo para consultar um Código de Endereçamento Postal (CEP) do Brasil</span>
+		<form action="" method="post" onsubmit="buscarCep(cep.value); return false;">
+			<fieldset class="group-cep">
+				<input type="text" id="cep" name="cep" placeholder="cep" onkeyup="aplicarMascaraCep(this, '#####-###')" pattern="[0-9]{5}-[\d]{3}" maxlength="9" required />
+				<label for="cep">CEP</label>
+			</fieldset>
+			<button class="content-button" type="submit" id="searchButton"><span>Buscar</span></button>
+		</form>
+	</div>
+
+	<div class="content-address">
+		<div class="content-white">
+			<div class="content-search" id="contentSearch">
+				<a class="button-close" onclick="mostrarFecharDivEndereco();">
+					<svg height="365.696pt" viewBox="0 0 365.696 365.696" width="365.696pt" xmlns="http://www.w3.org/2000/svg">
+						<path d="m243.1875 182.859375 113.132812-113.132813c12.5-12.5 12.5-32.765624 0-45.246093l-15.082031-15.082031c-12.503906-12.503907-32.769531-12.503907-45.25 0l-113.128906 113.128906-113.132813-113.152344c-12.5-12.5-32.765624-12.5-45.246093 0l-15.105469 15.082031c-12.5 12.503907-12.5 32.769531 0 45.25l113.152344 113.152344-113.128906 113.128906c-12.503907 12.503907-12.503907 32.769531 0 45.25l15.082031 15.082031c12.5 12.5 32.765625 12.5 45.246093 0l113.132813-113.132812 113.128906 113.132812c12.503907 12.5 32.769531 12.5 45.25 0l15.082031-15.082031c12.5-12.503906 12.5-32.769531 0-45.25zm0 0"/>
+					</svg>
+				</a>
+				<div class="centered-content-search">
+					<address>
+						<span class="content-title" id="ruaSpan"></span>
+						<span id="bairroSpan"></span><br />
+						<span id="cidadeSpan"></span> - <span id="ufSpan"></span> <br />
+						<span id="cepSpan"></span>
+					</address>
+					<iframe id="googleMap" aria-hidden="false" tabindex="0"></iframe>
+					<button class="content-button" type="submit" onclick="mostrarFecharDivEndereco();"><span>Fazer outra busca</span></button>
+				</div>
+			</div>
+		</div>
+	</div>
+</main>
+
+<script src="assets/js/libs/jquery-3.5.1.min.js"></script>
+<script src="assets/js/functions.js"></script>
+</body>
+</html>

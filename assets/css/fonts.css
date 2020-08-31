@@ -1,0 +1,53 @@
+/*Raleway*/
+@font-face {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 400;
+    src: url(../../assets/fonts/Raleway-Regular.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 500;
+    src: url(../../assets/fonts/Raleway-Medium.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 700;
+    src: url(../../assets/fonts/Raleway-Bold.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 900;
+    src: url(../../assets/fonts/Raleway-Black.ttf) format('truetype');
+}
+
+/*Metropolis*/
+@font-face {
+    font-family: 'Metropolis';
+    font-style: normal;
+    font-weight: lighter;
+    src: url(../../assets/fonts/metropolis-light-webfont.woff) format('woff'),
+    url(../../assets/fonts/metropolis-light-webfont.woff2) format('woff2');
+}
+
+@font-face {
+    font-family: 'Metropolis';
+    font-style: normal;
+    font-weight: 400;
+    src: url(../../assets/fonts/metropolis-regular-webfont.woff) format('woff'),
+    url(../../assets/fonts/metropolis-regular-webfont.woff2) format('woff2');
+}
+
+@font-face {
+    font-family: 'Metropolis';
+    font-style: normal;
+    font-weight: 900;
+    src: url(../../assets/fonts/metropolis-black-webfont.woff) format('woff'),
+    url(../../assets/fonts/metropolis-black-webfont.woff2) format('woff2');
+}
