@@ -14,7 +14,7 @@ Sua tarefa é construir o projeto a partir do design que está na pasta '/design
 - Ser uma interface responsiva. 
 - Não fazer trocas de URLS
 - Usar esta API aberta de consulta de CEP: https://viacep.com.br/
-- Disponibilizar aplicação em um projeto privado no github e permitir acesso ao e-mail cristhiane.resende@levelup.com.br. 
+- Disponibilizar aplicação em um projeto privado no github e permitir acesso ao e-mail. 
 - Utilizar HTML, CSS e Javascript e/ou Jquery. 
 
 
